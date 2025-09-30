@@ -8,26 +8,27 @@
         body, html {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Evita barras de rolagem desnecessárias */
             height: 100%;
             width: 100%;
+            display: flex; /* Para centralizar a imagem */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            background-color: #f0f2f5; /* Cor de fundo similar ao seu outro projeto */
         }
-        /* O iframe é a moldura que carrega o PDF */
-        #pdf-viewer {
-            width: 100%;
-            height: 100%;
-            border: none; /* Remove a borda padrão do iframe */
+        #pdf-image { /* Estilo para a imagem do PDF */
+            max-width: 100%; /* Garante que a imagem se ajuste à largura da tela */
+            max-height: 100vh; /* Garante que a imagem se ajuste à altura da tela */
+            height: auto; /* Mantém a proporção da imagem */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar um destaque */
+            border-radius: 8px; /* Cantos arredondados, se desejar */
         }
     </style>
 </head>
 <body>
 
-    <iframe id="pdf-viewer" 
-            src="Retro Trendy First Birthday Party Invitation.pdf" 
-            title="PDF de Informações">
-        <p>Seu navegador não suporta a visualização de PDF integrada. 
-           Você pode <a href="Retro Trendy First Birthday Party Invitation.pdf" target="_blank">clicar aqui para baixar</a>.</p>
-    </iframe>
+    <img id="pdf-image" 
+         src="informacoes_pessoais.jpg" 
+         alt="Documento de Informações Pessoais">
 
 </body>
 </html>
